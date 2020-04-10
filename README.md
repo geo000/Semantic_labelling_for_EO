@@ -12,7 +12,7 @@ Specific information about sentinel 1A and sentinel 2A can be found [here](https
 
 Futher information about sentinel 2 is [here](https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c)
 
-## Indicies
+## Indices
 Normalised Build up Difference Index (Zha et al., 2007)
 
 Modified Normalised Difference Water Index (Xu, 2006)
