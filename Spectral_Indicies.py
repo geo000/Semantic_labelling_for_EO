@@ -43,7 +43,6 @@ class S2SpectralIndex:
     Normalised Difference Water Index
     McFeeters, 1996
     """
-
     def NDWI(self):
         top = np.subtract(self.green, self.NIR)
         bottom = np.add(self.green, self.NIR)
