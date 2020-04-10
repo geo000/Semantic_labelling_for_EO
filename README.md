@@ -8,5 +8,5 @@ Inputs should be numpy arrays.
 ## Arguments
 
 s2bandn - Refers to sentinel 2 bands. 
-Specific information about sentinel 1A and sentinel 2A can be found ![here]https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument
+Specific information about sentinel 1A and sentinel 2A can be found ![here](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument)
 
