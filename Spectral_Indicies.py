@@ -28,38 +28,45 @@ class SpectralIndex:
     def NBDI(self):
         top = np.subtract(self.SWIR1, self.NIRn)
         bottom = np.add(self.SWIR1, self.NIRn)
-        NDBI_output = np.divide(top, bottom)
-        return NDBI_output
+        return np.divide(top, bottom)
 
     """
     Modified Normalised Difference Water Index
     Xu, 2006
     """
-    # def MNDWI(self):
-        # return (self.green - self.SWIR1) / (self.green + self.SWIR1)
+    def MNDWI(self):
+        top = np.subtract(self.green, self.SWIR1)
+        bottom = np.add(self.green, self.SWIR1)
+        return np.divide(top, bottom)
 
     """
     Normalised Difference Water Index
     McFeeters, 1996
     """
 
-    # def NDWI(self):
-        # return (self.green - self.NIR) / (self.green / self.NIR)
+    def NDWI(self):
+        top = np.subtract(self.green, self.NIR)
+        bottom = np.add(self.green, self.NIR)
+        return np.divide(top, bottom)
 
     """
     Normalized Difference Fraction
     USE: Flooding
     Boschetti et al., 2014
     """
-    # def NDFI(self):
-        # return (self.green - self.SWIR2) / (self.green / self.SWIR2)
+    def NDFI(self):
+        top = np.subtract(self.green, self.SWIR2)
+        bottom = np.add(self.green, self.SWIR2)
+        return np.divide(top, bottom)
 
     """  
     Water Ratio Index
     Shen and Li, 2010
     """
-    # def WRI(self):
-        # return (self.green + self.red) / (self.NIR + self.SWIR1)
+    def WRI(self):
+        top = np.add(self.green, self.red)
+        bottom = np.add(self.NIR, self.SWIR1)
+        return np.divide(top, bottom)
 
 
 
