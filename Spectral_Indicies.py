@@ -1,4 +1,4 @@
-
+import numpy as np
 
 class SpectralIndex:
     def __init__(self,
@@ -21,37 +21,46 @@ class SpectralIndex:
         self.SWIR2 = s2band12
         self.band12 = s2band13
 
+    """
+    normalized difference built-up index 
+    Zha et al., 2007
+    """
+    def NBDI(self):
+        top = np.subtract(self.SWIR1, self.NIRn)
+        bottom = np.add(self.SWIR1, self.NIRn)
+        NDBI_output = np.divide(top, bottom)
+        return NDBI_output
 
     """
     Modified Normalised Difference Water Index
     Xu, 2006
     """
-
-    def MNDWI(self):
-        return (self.green - self.SWIR1) / (self.green + self.SWIR1)
+    # def MNDWI(self):
+        # return (self.green - self.SWIR1) / (self.green + self.SWIR1)
 
     """
     Normalised Difference Water Index
     McFeeters, 1996
     """
 
-    def NDWI(self):
-        return (self.green - self.NIR) / (self.green / self.NIR)
+    # def NDWI(self):
+        # return (self.green - self.NIR) / (self.green / self.NIR)
 
     """
+    Normalized Difference Fraction
     USE: Flooding
     Boschetti et al., 2014
     """
-
-    def NDFI(self):
-        return (self.green - self.SWIR2) / (self.green / self.SWIR2)
+    # def NDFI(self):
+        # return (self.green - self.SWIR2) / (self.green / self.SWIR2)
 
     """  
     Water Ratio Index
     Shen and Li, 2010
     """
+    # def WRI(self):
+        # return (self.green + self.red) / (self.NIR + self.SWIR1)
 
-    def WRI(self):
-        return (self.green + self.red) / (self.NIR + self.SWIR1)
+
 
 
