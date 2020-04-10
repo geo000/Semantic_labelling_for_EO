@@ -8,7 +8,7 @@ This will be periodically updated.
 Copernicus Sentinel 2 bands.
 Inputs must be numpy arrays. 
 
-Specific information about sentinel 1A and sentinel 2A can be found [here](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument)
+Specific information about sentinel 1A and sentinel 2A/B can be found [here](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument)
 
 ![](https://github.com/ThomasJames/Spectral_Indices/blob/master/S2_bands.png)
 
