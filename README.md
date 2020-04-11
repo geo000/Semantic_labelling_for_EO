@@ -3,6 +3,14 @@
 Class containing indicies for sentinel 2 data. 
 This will be periodically updated.
 
+## Prerequisite
+
+This is built to work with numpy arrays:
+
+```
+pip install numpy
+```
+
 ## Inputs
 
 Copernicus Sentinel 2 bands.
