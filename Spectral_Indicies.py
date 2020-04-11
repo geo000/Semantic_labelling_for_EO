@@ -2,51 +2,45 @@ import numpy as np
 
 class S2SpectralIndex:
     def __init__(self,
-                 band1, band2, band3, band4, band5,
-                 band6, band7, band8, band9, band10,
-                 band11, band12, band13):
+                 B01, B02, B03, B04, B05,
+                 B06, B07, B08, B09, B10,
+                 B11, B12):
 
         # Copernicus Sentinel 2
-        self.ultra_blue = band1
-        self.blue = band2
-        self.green = band3
-        self.re1 = band4
-        self.re2 = band5
-        self.re3 = band6
-        self.NIR = band7
-        self.NIRn = band8
-        self.Water_vapor = band9
-        self.SWIR_cirrus = band10
-        self.SWIR1 = band11
-        self.SWIR2 = band12
-        self.band12 = band13
+        self.ultra_blue = B01
+        self.blue = B02
+        self.green = B03
+        self.re1 = B04
+        self.re2 = B05
+        self.re3 = B06
+        self.NIR = B07
+        self.NIRn = B08
+        self.Water_vapor = B09
+        self.SWIR_cirrus = B10
+        self.SWIR1 = B11
+        self.SWIR2 = B12
 
     """
     normalized difference built-up index 
     Zha et al., 2007
     """
     def NBDI(self):
-        top = np.subtract(self.SWIR1, self.NIRn)
-        bottom = np.add(self.SWIR1, self.NIRn)
-        return np.divide(top, bottom)
-
+        return np.divide(np.subtract(self.SWIR1, self.NIRn), (np.add(self.SWIR1, self.NIRn)))
+        
     """
     Modified Normalised Difference Water Index
     Xu, 2006
     """
     def MNDWI(self):
-        top = np.subtract(self.green, self.SWIR1)
-        bottom = np.add(self.green, self.SWIR1)
-        return np.divide(top, bottom)
+        return np.divide(np.subtract(self.green, self.SWIR1)), (np.add(self.green, self.SWIR1))
 
     """
     Normalised Difference Water Index
     McFeeters, 1996
     """
+
     def NDWI(self):
-        top = np.subtract(self.green, self.NIR)
-        bottom = np.add(self.green, self.NIR)
-        return np.divide(top, bottom)
+        return np.divide(np.subtract(self.green, self.NIR), (np.add(self.green, self.NIR)))
 
     """
     Normalized Difference Fraction
@@ -54,19 +48,24 @@ class S2SpectralIndex:
     Boschetti et al., 2014
     """
     def NDFI(self):
-        top = np.subtract(self.green, self.SWIR2)
-        bottom = np.add(self.green, self.SWIR2)
-        return np.divide(top, bottom)
+        return np.divide(np.subtract(self.green, self.SWIR2), np.add(self.green, self.SWIR2))
 
     """  
     Water Ratio Index
     Shen and Li, 2010
     """
     def WRI(self):
-        top = np.add(self.green, self.red)
-        bottom = np.add(self.NIR, self.SWIR1)
-        return np.divide(top, bottom)
+        return np.divide((np.add(self.green, self.red)), (np.add(self.NIR, self.SWIR1)))
 
 
+    """
+    Soil Adjusted Vegetation Index
+    """
+    def SAVI(self):
+        L = 0.428
+        return (np.subtract(self.NIRn, self.re1)), (np.add(self.NIRn, self.re1)) * (1.0 + L)
 
+    """ 
+    SIPI (Structure Insensitive Pigment Index)
+    """
 
