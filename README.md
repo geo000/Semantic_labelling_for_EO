@@ -10,6 +10,12 @@ This is built to work with numpy arrays:
 ```
 pip install numpy
 ```
+### Error handling
+
+- Program checks that input is numpy array.
+
+- Program checks that image dimensions are consistent.
+
 
 ## Inputs
 
