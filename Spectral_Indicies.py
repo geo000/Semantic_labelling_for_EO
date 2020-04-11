@@ -79,7 +79,7 @@ class S2SpectralIndex:
         try:
             return np.divide(np.subtract(self.green, self.SWIR2), np.add(self.green, self.SWIR2))
         except IOError:
-            print("Check you have loaded in the right bands")
+            print("ERROR: Image dimensions are not consistent")
 
     """  
     Water Ratio Index
