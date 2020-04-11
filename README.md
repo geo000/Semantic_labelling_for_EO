@@ -5,7 +5,7 @@ This will be updated every now and then.
 
 ## Prerequisite
 
-This is built to work with numpy arrays:
+This program is works with numpy arrays:
 
 ```
 pip install numpy
