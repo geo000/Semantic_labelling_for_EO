@@ -1,7 +1,7 @@
 # Spectral Indicies
 
 Class containing indicies for sentinel 2 data. 
-This will be periodically updated.
+This will be updated every now and then.
 
 ## Prerequisite
 
