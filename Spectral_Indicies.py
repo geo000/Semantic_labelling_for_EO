@@ -15,6 +15,14 @@ class S2SpectralIndex:
             elif type(arg[i]).__module__ != np.__name__:
                 print("Input of band ", str(i + 1), "must be a numpy array")
 
+        # Check for consistency in dimensions.
+        dim = []
+        for i in range(len(arg)):
+            if arg[i] is not None:
+                dim.append(arg[i].shape)
+        if len(set(dim)) > 1:
+            print("Check dimensions")
+
         self.ultra_blue = B01
         self.blue = B02
         self.green = B03
@@ -98,7 +106,7 @@ class S2SpectralIndex:
 # Simple example
 a = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
 
-b = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+b = np.array([[1, 2, 4], [3, 2, 2], [6, 3, 3]])
 
 z = S2SpectralIndex(B11=a, B08=b)
 z_NBDI = z.NBDI()
