@@ -94,12 +94,13 @@ class S2SpectralIndex:
 
     """
     Soil Adjusted Vegetation Index
+    HUETE, 1988
     """
 
     def SAVI(self):
         L = 0.428
         try:
-            return (np.subtract(self.NIRn, self.re1)), (np.add(self.NIRn, self.re1)) * (1.0 + L)
+            return np.divide((np.subtract(self.NIRn, self.re1), (np.add(self.NIRn, self.re1)) * (1.0 + L)
         except IOError:
             print("Check you have loaded in the right bands")
 
