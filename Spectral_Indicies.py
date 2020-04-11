@@ -1,12 +1,20 @@
 import numpy as np
 
+
 class S2SpectralIndex:
     def __init__(self,
-                 B01, B02, B03, B04, B05,
-                 B06, B07, B08, B09, B10,
-                 B11, B12):
+                 B01=None, B02=None, B03=None, B04=None, B05=None,
+                 B06=None, B07=None, B08=None, B09=None, B10=None,
+                 B11=None, B12=None):
 
-        # Copernicus Sentinel 2
+        # Check the arguments are numpy arrays.
+        arg = np.array([B01, B02, B03, B04, B05, B06, B07, B08, B09, B10, B11, B12])
+        for i in range(len(arg)):
+            if arg[i] is None:
+                continue
+            elif type(arg[i]).__module__ != np.__name__:
+                print("Input of band ", str(i + 1), "must be a numpy array")
+
         self.ultra_blue = B01
         self.blue = B02
         self.green = B03
@@ -24,15 +32,23 @@ class S2SpectralIndex:
     normalized difference built-up index 
     Zha et al., 2007
     """
+
     def NBDI(self):
-        return np.divide(np.subtract(self.SWIR1, self.NIRn), (np.add(self.SWIR1, self.NIRn)))
-        
+        try:
+            return np.divide(np.subtract(self.SWIR1, self.NIRn), (np.add(self.SWIR1, self.NIRn)))
+        except IOError:
+            print("Check you have loaded in the right bands")
+
     """
     Modified Normalised Difference Water Index
     Xu, 2006
     """
+
     def MNDWI(self):
-        return np.divide(np.subtract(self.green, self.SWIR1)), (np.add(self.green, self.SWIR1))
+        try:
+            return np.divide(np.subtract(self.green, self.SWIR1)), (np.add(self.green, self.SWIR1))
+        except IOError:
+            print("Check you have loaded in the right bands")
 
     """
     Normalised Difference Water Index
@@ -40,32 +56,50 @@ class S2SpectralIndex:
     """
 
     def NDWI(self):
-        return np.divide(np.subtract(self.green, self.NIR), (np.add(self.green, self.NIR)))
+        try:
+            return np.divide(np.subtract(self.green, self.NIR), (np.add(self.green, self.NIR)))
+        except IOError:
+            print("Check you have loaded in the right bands")
 
     """
     Normalized Difference Fraction
     USE: Flooding
     Boschetti et al., 2014
     """
+
     def NDFI(self):
-        return np.divide(np.subtract(self.green, self.SWIR2), np.add(self.green, self.SWIR2))
+        try:
+            return np.divide(np.subtract(self.green, self.SWIR2), np.add(self.green, self.SWIR2))
+        except IOError:
+            print("Check you have loaded in the right bands")
 
     """  
     Water Ratio Index
     Shen and Li, 2010
     """
-    def WRI(self):
-        return np.divide((np.add(self.green, self.red)), (np.add(self.NIR, self.SWIR1)))
 
+    def WRI(self):
+        try:
+            return np.divide((np.add(self.green, self.red)), (np.add(self.NIR, self.SWIR1)))
+        except IOError:
+            print("Check you have loaded in the right bands")
 
     """
     Soil Adjusted Vegetation Index
     """
+
     def SAVI(self):
         L = 0.428
-        return (np.subtract(self.NIRn, self.re1)), (np.add(self.NIRn, self.re1)) * (1.0 + L)
+        try:
+            return (np.subtract(self.NIRn, self.re1)), (np.add(self.NIRn, self.re1)) * (1.0 + L)
+        except IOError:
+            print("Check you have loaded in the right bands")
 
-    """ 
-    SIPI (Structure Insensitive Pigment Index)
-    """
+# Simple example
+a = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
 
+b = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+
+z = S2SpectralIndex(B11=a, B08=b)
+z_NBDI = z.NBDI()
+print(z_NBDI)
