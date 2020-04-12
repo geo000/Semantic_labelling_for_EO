@@ -1,11 +1,7 @@
-from sentinelhub import WmsRequest, MimeType, CRS, BBox, SHConfig, DataSource
-from sentinelhub import SHConfig
-from sentinelhub import WmsRequest, WcsRequest, MimeType, CRS, BBox
+from sentinelhub import WmsRequest, MimeType, CRS, BBox, SHConfig, DataSource, SHConfig, DataSource
 import matplotlib.pyplot as plt
-from sentinelhub import DataSource
 from datetime import timedelta, date
 import numpy as np
-from sentinelhub import CustomUrlParam
 
 """
 
@@ -80,6 +76,7 @@ class Sentinel_request:
                                width=self.width,
                                height=self.height,
                                maxcc=self.maxcc,
+                               image_format=MimeType.TIFF_d32f,
                                config=self.config).get_data())
             try:
                 data = np.array(data[-1][:, :, self.band])
@@ -143,8 +140,7 @@ if __name__ == "__main__":
     for single_date in date_range(start_date, end_date):
         date_list.append(str(single_date.strftime("%Y-%m-%d")))
 
-
-
+    # Specify the parameters
     s2_batch = Sentinel_request(
         data_type="BANDS-S2-L1C",
         bbox=betsiboka_bbox,
@@ -156,4 +152,5 @@ if __name__ == "__main__":
         band=B01
         )
 
+    # Make a batch request.
     s2_batch_request = s2_batch.request_batch()
