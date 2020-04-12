@@ -3,6 +3,11 @@
 Class containing indicies for sentinel 2 data. 
 This will be updated every now and then.
 
+# Requesting data from Sentinel Hub API
+
+All the code required to obtain sentinel 2 data is [here](https://github.com/ThomasJames/Spectral_Indices/blob/master/data_request.py)
+The SentinelRequest class contains methods to obtain a single image of all bands, or a large batch of images of a specified band. 
+
 ## Prerequisite
 
 This program is works with numpy arrays:
@@ -30,6 +35,7 @@ Specific information about sentinel 1A and sentinel 2A/B can be found [here](htt
 Futher information about sentinel 2 is [here](https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c)
 
 ## Indices
+
 Normalised Build up Difference Index (Zha et al., 2007)
 
 Modified Normalised Difference Water Index (Xu, 2006)
@@ -39,4 +45,7 @@ Normalised Difference Water Index (McFeeters, 1996)
 Normalized Difference Fraction (Boschetti et al., 2014)
 
 Water Ratio Index (Shen and Li, 2010)
+
+
+
 
