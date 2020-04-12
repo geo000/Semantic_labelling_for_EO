@@ -1,4 +1,4 @@
-from sentinelhub import WmsRequest, MimeType, CRS, BBox, SHConfig, DataSource, SHConfig, DataSource
+from sentinelhub import WmsRequest, MimeType, CRS, BBox, DataSource, SHConfig, DataSource
 import matplotlib.pyplot as plt
 from datetime import timedelta, date
 import numpy as np
