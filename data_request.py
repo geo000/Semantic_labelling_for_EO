@@ -59,7 +59,7 @@ __________________________________
 class Sentinel_request:
     def __init__(self, data_type=None, bbox=None, date=None, width=None,
                        height=None, maxcc=None, config=None, start_date=None,
-                       end_date=None):
+                       end_date=None, band=None):
 
         self.data_type = data_type
         self.bbox = bbox
@@ -70,19 +70,20 @@ class Sentinel_request:
         self.config = config
         self.start_date = start_date
         self.end_date = end_date
+        self.band = band
 
     def request_batch(self):
         for i in range(len(self.date)):
-            data = (self.request_single(self.data_type,
-                                        self.bbox,
-                                        self.date[i],
-                                        self.width,
-                                        self.height,
-                                        self.maxcc,
-                                        self.config).get_data())
+            data = (WmsRequest(layer=self.data_type,
+                               bbox=self.bbox,
+                               time=self.date[i],
+                               width=self.width,
+                               height=self.height,
+                               maxcc=self.maxcc,
+                               config=self.config).get_data())
             try:
-                data = np.array(data[-1])
-                plt.imsave(str(self.date_list[i]) + ".png", data)
+                data = np.array(data[-1][:, :, self.band])
+                plt.imsave(str(self.date[i]) + ".png", data)
             except:
                 pass
 
@@ -98,9 +99,9 @@ class Sentinel_request:
             config=self.config).get_data()
         return image
 
-    def date_range(self):
-        for n in range(int((self.end_date - self.start_date).days)):
-            yield self.start_date + timedelta(n)
+def date_range(start_date, end_date):
+    for n in range(int((end_date - start_date).days)):
+        yield start_date + timedelta(n)
 
 
 if __name__ == "__main__":
@@ -117,7 +118,7 @@ if __name__ == "__main__":
     betsiboka_coords_wgs84 = [46.16, -16.15, 46.51, -15.58]
     betsiboka_bbox = BBox(bbox=betsiboka_coords_wgs84, crs=CRS.WGS84)
 
-    # Define a sentinel 2 l1c bands request
+    #
     S2_data_request = Sentinel_request(data_type="BANDS-S2-L1C",
                             bbox=betsiboka_bbox,
                             date="latest",
@@ -130,7 +131,7 @@ if __name__ == "__main__":
     S2_data = S2_data_request.request_single()
 
     # Identify band of interest
-    B01 = 0
+    B01 = 1
 
     # Extract the band of interest
     single_image = np.array(S2_data[-1][:, :, B01])
@@ -139,7 +140,20 @@ if __name__ == "__main__":
     start_date = date(2017, 1, 1)
     end_date = date(2019, 3, 1)
     date_list = []
-    for single_date in Sentinel_request.date_range(start_date=start_date, end_date=end_date):
+    for single_date in date_range(start_date, end_date):
         date_list.append(str(single_date.strftime("%Y-%m-%d")))
 
-    print(date_list)
+
+
+    s2_batch = Sentinel_request(
+        data_type="BANDS-S2-L1C",
+        bbox=betsiboka_bbox,
+        date=date_list,
+        width=315,
+        height=512,
+        maxcc=0.0,
+        config=config,
+        band=B01
+        )
+
+    s2_batch_request = s2_batch.request_batch()
