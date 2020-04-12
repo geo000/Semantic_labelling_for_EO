@@ -104,9 +104,12 @@ class S2SpectralIndex:
         except IOError:
             print("Check you have loaded in the right bands")
 
-# Simple example
+'''
+Simple example - Two numpy 3 x 3 arrays representing images with consistent pixel dimensions.
+In this case a = band 11 (short wave infrared 1), b = band 8 (Near Infrared)
+The test case is the normalized difference built-up index.
+'''
 a = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
-
 b = np.array([[1, 2, 4], [3, 2, 2], [6, 3, 3]])
 
 z = S2SpectralIndex(B11=a, B08=b)
