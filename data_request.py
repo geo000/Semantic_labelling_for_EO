@@ -117,7 +117,7 @@ if __name__ == "__main__":
     betsiboka_coords_wgs84 = [46.16, -16.15, 46.51, -15.58]
     betsiboka_bbox = BBox(bbox=betsiboka_coords_wgs84, crs=CRS.WGS84)
 
-    #
+    # Define a sentinel 2 l1c bands request
     S2_data_request = Sentinel_request(data_type="BANDS-S2-L1C",
                             bbox=betsiboka_bbox,
                             date="latest",
