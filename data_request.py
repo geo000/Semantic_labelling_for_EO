@@ -104,7 +104,7 @@ def date_range(start_date, end_date):
 if __name__ == "__main__":
 
     # Get the configuration
-    INSTANCE_ID = '77763d50-1c52-42a9-8850-2a84823362ce'
+    INSTANCE_ID = '758738'
     if INSTANCE_ID:
         config = SHConfig()
         config.instance_id = INSTANCE_ID
