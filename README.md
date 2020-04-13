@@ -6,7 +6,7 @@ This will be updated every now and then.
 # Requesting data from Sentinel Hub API
 
 All the code required to obtain sentinel 2 data is [here](https://github.com/ThomasJames/Spectral_Indices/blob/master/data_request.py)
-The ```Sentinel_request``` class contains methods to obtain a single image of all bands, or a large batch of images of a specified band. 
+The ```SentinelRequest``` class contains methods to obtain a single image of all bands, or a large batch of images of a specified band. 
 
 ## Prerequisite
 
