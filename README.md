@@ -14,6 +14,9 @@ This program is works with numpy arrays:
 
 ```
 pip install numpy
+pip install sentinelhub
+pip install matplotlib
+import numpy as np
 ```
 ### Error handling
 
