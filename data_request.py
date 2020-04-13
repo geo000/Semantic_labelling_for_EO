@@ -52,7 +52,7 @@ https://www.sentinel-hub.com/
 __________________________________   
 """
 
-class Sentinel_request:
+class SentinelRequest:
     def __init__(self, data_type=None, bbox=None, date=None, width=None,
                        height=None, maxcc=None, config=None, start_date=None,
                        end_date=None, band=None):
