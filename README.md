@@ -36,6 +36,11 @@ Specific information about sentinel 1A and sentinel 2A/B can be found [here](htt
 
 Futher information about sentinel 2 is [here](https://sentinel.esa.int/documents/247904/685211/Sentinel-2+Products+Specification+Document+%28PSD%29/0f7bedeb-9fbb-4b60-91aa-809162de456c)
 
+## Normalised Difference Water Index (NDWI) - Example:
+
+![](https://github.com/ThomasJames/Spectral_Indices/blob/master/Normalised%20Difference%20Water%20Index.png)
+
+
 ## Indices
 
 Normalised Build up Difference Index (Zha et al., 2007)
