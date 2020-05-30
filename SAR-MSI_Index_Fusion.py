@@ -55,25 +55,3 @@ plt.imsave("NDBI.png", NDBI, cmap="Reds")
 plt.imsave("Combined.png", COM, cmap="Pastel2")
 plt.imsave("SAR.png", SAR, cmap="Blues")
 plt.imsave("TC.png", TC)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
