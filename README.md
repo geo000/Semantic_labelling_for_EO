@@ -53,7 +53,13 @@ Normalized Difference Fraction (Boschetti et al., 2014)
 
 Water Ratio Index (Shen and Li, 2010)
 
-# SAR-MSI Index fusion algorithm.
+# SAR-MSI Index fusion algorithm
+
+```
+WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
+      (j*((green - SWIR2) / (green + SWIR2))) +
+      (k * ((green - NIR) / (green + NIR)))) + (l * SAR)
+      ```
 
 
 
