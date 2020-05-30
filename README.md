@@ -55,11 +55,18 @@ Water Ratio Index (Shen and Li, 2010)
 
 # SAR-MSI Index fusion algorithm
 
+Used for semantic labelling for CNN training
+
 ```
+Water index label:
 WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
       (j*((green - SWIR2) / (green + SWIR2))) +
       (k * ((green - NIR) / (green + NIR)))) + (l * SAR)
+      
+Built up index lable
+NDBI = (SWIR2 - NIR) / (SWIR2 + NIR)
       ```
+
 
 
 
