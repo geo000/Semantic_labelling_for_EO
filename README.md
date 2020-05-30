@@ -65,9 +65,8 @@ WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
       
 Built up index lable
 NDBI = (SWIR2 - NIR) / (SWIR2 + NIR)
-      ```
-
-
+```
+![](https://github.com/ThomasJames/Spectral_Indices/blob/master/Combined.png)
 
 
 
