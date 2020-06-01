@@ -35,7 +35,7 @@ def split_image(dim_pix, im, location, dtype, filename):
     for i in rows:
         for j in columns:
 
-            # Check for 244 x 244 (Mask) or 244 x 244 x 3 (TC image)
+            # Check for network compatability
             if im[0 + (dim_pix * j): dim_pix + (dim_pix * j),
                   0 + dim_pix * i: dim_pix + (dim_pix * i)].shape == \
                     (dim_pix, dim_pix) or (dim_pix, dim_pix, 3):
