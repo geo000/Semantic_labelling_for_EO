@@ -1,9 +1,11 @@
-# Spectral Indicies
+# EO toolkit for Semantic Data Labelling 
+
+## Spectral Indicies
 
 Class containing indicies for sentinel 2 data. 
 This will be updated every now and then.
 
-# Requesting data from Sentinel Hub API
+## Requesting data from Sentinel Hub API
 
 All the code required to obtain sentinel 2 data is [here](https://github.com/ThomasJames/Spectral_Indices/blob/master/data_request.py)
 The ```SentinelRequest``` class contains methods to obtain a single image of all bands, or a large batch of images of a specified band. 
@@ -16,6 +18,10 @@ This program is works with numpy arrays:
 pip install numpy
 pip install sentinelhub
 pip install matplotlib
+pip install rifffile
+pip install scikit-image
+pip install pillow
+pip install opencv-python
 ```
 ### Error handling
 
@@ -51,7 +57,7 @@ Normalized Difference Fraction (Boschetti et al., 2014)
 
 Water Ratio Index (Shen and Li, 2010)
 
-# SAR-MSI Index fusion algorithm
+## SAR-MSI Index fusion algorithm
 
 Used for semantic labelling for CNN training
 
@@ -66,7 +72,7 @@ NDBI = (SWIR2 - NIR) / (SWIR2 + NIR)
 ```
 <img src="https://github.com/ThomasJames/Spectral_Indices/blob/master/Combined.png" width="500">
 
-# Training tile extraction
+## Training tile extraction
 
 For this project I wanted to extract 244x244 mask, ans 244x244x3 (true color) tiles for the VGG-16 network so I built this function. 
 It can be scaled to any tile size. 
