@@ -96,6 +96,7 @@ def sp_noise(image, prob):
 if __name__ == "__main__":
 
     region = "2"
+    location = "Rotterdam"
 
     # Extract True Color image
     TC = np.load(f"TC-Region{region}.npy")
@@ -106,8 +107,8 @@ if __name__ == "__main__":
     SAR = SAR[-1][:, :, 1]
 
     bs = 0.006
-    SAR[SAR > bs] = 1
-    SAR[SAR < bs] = 0
+    SAR[SAR > bs] = 0
+    SAR[SAR < bs] = 1
 
     # Extract MSI bands
     MSI = np.load(f"MSI-Region{region}.npy")
@@ -119,10 +120,10 @@ if __name__ == "__main__":
     SWIR2 = MSI[-1][:, :, 11]
 
     # Water Index
-    i = 1.0
-    j = 1.1
-    k = 1.0
-    l = 0.2
+    i = 0.5 # NDBI
+    j = .0 # MDWI.1
+    k = 1.0 # MDWI.2
+    l = 0.1 # SAR
 
     WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
           (j * ((green - SWIR2) / (green + SWIR2))) +
@@ -136,45 +137,33 @@ if __name__ == "__main__":
 
 
     # NORMAL
-
-    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}")
-    split_image(dim_pix=244, im=TC, location="Dhaka", dtype=f"TC", filename=f"Region_{region}")
+    split_image(dim_pix=244, im=WI, location=location, dtype=f"Mask", filename=f"Region_{region}")
+    split_image(dim_pix=244, im=TC, location=location, dtype=f"TC", filename=f"Region_{region}")
 
     # Horizontal Flip
-
     TC_Hflip = np.flip(TC, 1)
     WI_Hflip = np.flip(WI, 1)
-
     Hflip = "_Hflip"
-
-    split_image(dim_pix=244, im=WI_Hflip, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Hflip}")
-    split_image(dim_pix=244, im=TC_Hflip, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Hflip}")
+    split_image(dim_pix=244, im=WI_Hflip, location=location, dtype=f"Mask", filename=f"Region_{region}{Hflip}")
+    split_image(dim_pix=244, im=TC_Hflip, location=location, dtype=f"TC", filename=f"Region_{region}{Hflip}")
 
     # Vertical Flip
-
     TC_Vflip = np.flip(TC, 0)
     WI_Vflip = np.flip(WI, 0)
-
     Vflip = "_Vflip"
-
-    split_image(dim_pix=244, im=WI_Vflip, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Vflip}")
-    split_image(dim_pix=244, im=TC_Vflip, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Vflip}")
+    split_image(dim_pix=244, im=WI_Vflip, location=location, dtype=f"Mask", filename=f"Region_{region}{Vflip}")
+    split_image(dim_pix=244, im=TC_Vflip, location=location, dtype=f"TC", filename=f"Region_{region}{Vflip}")
 
 
     # Blur filter
     TC_Blur = cv2.medianBlur(TC, 5)
     Blur = "_Blur"
+    split_image(dim_pix=244, im=WI, location=location, dtype=f"Mask", filename=f"Region_{region}{Blur}")
+    split_image(dim_pix=244, im=TC_Blur, location=location, dtype=f"TC", filename=f"Region_{region}{Blur}")
 
-    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Blur}")
-    split_image(dim_pix=244, im=TC_Blur, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Blur}")
-
+    # Noise Filter
     noise = sp_noise(TC, 0.05)
     TC_noise = noise + TC
-    plt.imshow(TC_noise)
-    plt.show()
-
     Noise = "_Noise"
-    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Noise}")
-    split_image(dim_pix=244, im=TC_noise, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Noise}")
-
-
+    split_image(dim_pix=244, im=WI, location=location, dtype=f"Mask", filename=f"Region_{region}{Noise}")
+    split_image(dim_pix=244, im=TC_noise, location=location, dtype=f"TC", filename=f"Region_{region}{Noise}")
