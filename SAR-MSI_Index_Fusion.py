@@ -2,10 +2,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import numpy as np
-import tifffile as tiff
+from tifffile import imsave
 import matplotlib.pyplot as plt
 from skimage.transform import rescale
 import skimage.color as color
+import numpy as np
+import PIL.Image as Image
+import cv2
+from PIL import Image, ImageOps
+import random
 
 """
 dim_pix - Dimensions of the target image (Model input)
@@ -29,7 +34,7 @@ def split_image(dim_pix, im, location, dtype, filename):
     a = 0
     for i in rows:
         for j in columns:
-            
+
             # Check for 244 x 244 (Mask) or 244 x 244 x 3 (TC image)
             if im[0 + (dim_pix * j): dim_pix + (dim_pix * j),
                   0 + dim_pix * i: dim_pix + (dim_pix * i)].shape == \
@@ -50,6 +55,7 @@ i - NBDI (Zha et al., 2007)
 j - PI (Jain et al., 2020)
 k - PI (Jain et al., 2020)
 l - SAR Scalar 
+
 """
 def WI(SWIR2, NIR, green, SAR, i, j, k, l):
     WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
@@ -59,16 +65,37 @@ def WI(SWIR2, NIR, green, SAR, i, j, k, l):
     WI[WI < 0] = 0
     return WI
 
-# i - NBDI (Zha et al., 2007)
+
 def NDBI(SWIR2, NIR):
     NDBI = (SWIR2 - NIR) / (SWIR2 + NIR)
     NDBI[NDBI > 0] = 1
     NDBI[NDBI < 0] = 0
     return NDBI
 
+
+# Function by: Md. Rezwanul Haque (stolen from stack overflow)
+def sp_noise(image, prob):
+    '''
+    Add salt and pepper noise to image
+    prob: Probability of the noise
+    '''
+    output = np.zeros(image.shape, np.uint8)
+    thres = 1 - prob
+    for i in range(image.shape[0]):
+        for j in range(image.shape[1]):
+            rdn = random.random()
+            if rdn < prob:
+                output[i][j] = 0
+            elif rdn > thres:
+                output[i][j] = 255
+            else:
+                output[i][j] = image[i][j]
+    return output
+
+
 if __name__ == "__main__":
 
-    region = "3"
+    region = "2"
 
     # Extract True Color image
     TC = np.load(f"TC-Region{region}.npy")
@@ -92,10 +119,10 @@ if __name__ == "__main__":
     SWIR2 = MSI[-1][:, :, 11]
 
     # Water Index
-    i = 0.0
-    j = 1.0
+    i = 1.0
+    j = 1.1
     k = 1.0
-    l = 0.0
+    l = 0.2
 
     WI = ((i * ((SWIR2 - NIR) / (SWIR2 + NIR))) +
           (j * ((green - SWIR2) / (green + SWIR2))) +
@@ -103,13 +130,51 @@ if __name__ == "__main__":
     WI[WI > 0] = 1
     WI[WI < 0] = 0
 
-    # Save the images
     plt.imsave("WI.png", WI, cmap="Blues")
     plt.imsave("SAR.png", SAR, cmap="Blues")
     plt.imsave("TC.png", TC)
 
-    # Split and export the training images and labels
-    split_image(dim_pix=244, im=WI, location="Shanghai", dtype="Mask", filename=f"Region_{region}")
-    split_image(dim_pix=244, im=TC, location="Shanghai", dtype="TC", filename=f"Region_{region}")
+
+    # NORMAL
+
+    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}")
+    split_image(dim_pix=244, im=TC, location="Dhaka", dtype=f"TC", filename=f"Region_{region}")
+
+    # Horizontal Flip
+
+    TC_Hflip = np.flip(TC, 1)
+    WI_Hflip = np.flip(WI, 1)
+
+    Hflip = "_Hflip"
+
+    split_image(dim_pix=244, im=WI_Hflip, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Hflip}")
+    split_image(dim_pix=244, im=TC_Hflip, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Hflip}")
+
+    # Vertical Flip
+
+    TC_Vflip = np.flip(TC, 0)
+    WI_Vflip = np.flip(WI, 0)
+
+    Vflip = "_Vflip"
+
+    split_image(dim_pix=244, im=WI_Vflip, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Vflip}")
+    split_image(dim_pix=244, im=TC_Vflip, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Vflip}")
+
+
+    # Blur filter
+    TC_Blur = cv2.medianBlur(TC, 5)
+    Blur = "_Blur"
+
+    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Blur}")
+    split_image(dim_pix=244, im=TC_Blur, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Blur}")
+
+    noise = sp_noise(TC, 0.05)
+    TC_noise = noise + TC
+    plt.imshow(TC_noise)
+    plt.show()
+
+    Noise = "_Noise"
+    split_image(dim_pix=244, im=WI, location="Dhaka", dtype=f"Mask", filename=f"Region_{region}{Noise}")
+    split_image(dim_pix=244, im=TC_noise, location="Dhaka", dtype=f"TC", filename=f"Region_{region}{Noise}")
 
 
