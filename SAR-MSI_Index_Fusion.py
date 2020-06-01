@@ -16,20 +16,32 @@ dytpe - String to describe (Label or input)
 
 
 def split_image(dim_pix, im, location, dtype, filename):
+    # Find the number of sub-images that fit in rows
     rows = []
     for i in range((math.floor(im.shape[0] / dim_pix))):
         rows.append(i)
+    # Find the number of sub-images that fit in rows
     columns = []
     for i in range((math.floor(im.shape[1] / dim_pix))):
         columns.append(i)
+
+    # Numerically identify the sub-image
     a = 0
     for i in rows:
         for j in columns:
-            plt.imsave(f"{filename}/{a}{dtype}{location}.png",
-                       im[0 + (dim_pix * j): dim_pix + (dim_pix * j),
-                       0 + dim_pix * i: dim_pix + (dim_pix * i)],
-                       cmap="Blues")
-            a += 1
+            
+            # Check for 244 x 244 (Mask) or 244 x 244 x 3 (TC image)
+            if im[0 + (dim_pix * j): dim_pix + (dim_pix * j),
+                  0 + dim_pix * i: dim_pix + (dim_pix * i)].shape == \
+                    (dim_pix, dim_pix) or (dim_pix, dim_pix, 3):
+
+                # Save the 244 x 244 as an tiff file.
+                imsave(f"{filename}/{location}_{region}_{a}_{dtype}.tiff",
+                        im[0 + (dim_pix * j): dim_pix + (dim_pix * j),
+                        0 + dim_pix * i: dim_pix + (dim_pix * i)])
+                a += 1
+            else:
+                print("no data")
 
 
 """
