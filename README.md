@@ -68,7 +68,7 @@ NDBI = (SWIR2 - NIR) / (SWIR2 + NIR)
 
 # Training tile extraction
 
-For this project I wanted to extract 244 tiles for the VGG-16 network so I built this function. 
+For this project I wanted to extract 244x244 mask, ans 244x244x3 (true color) tiles for the VGG-16 network so I built this function. 
 It can be scaled to any tile size. 
 
 ```
