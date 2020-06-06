@@ -1,0 +1,601 @@
+@misc{clerc_2020_level,
+  author = {Clerc, S and Devignot, O and Pessiot, L},
+  publisher = {ESA},
+  title = {Level 2A Data Quality Report S2 MPC},
+  url = {https://sentinel.esa.int/documents/247904/685211/Sentinel-2-L2A-Data-Quality-Report},
+  year = {2020}
+}
+
+@article{drusch_2012_sentinel2,
+  author = {Drusch, M. and Del Bello, U. and Carlier, S. and Colin, O. and Fernandez, V. and Gascon, F. and Hoersch, B. and Isola, C. and Laberinti, P. and Martimort, P. and Meygret, A. and Spoto, F. and Sy, O. and Marchese, F. and Bargellini, P.},
+  month = {05},
+  pages = {25-36},
+  title = {Sentinel-2: ESA's Optical High-Resolution Mission for GMES Operational Services},
+  url = {https://www.sciencedirect.com/science/article/pii/S0034425712000636},
+  urldate = {2019-11-22},
+  volume = {120},
+  year = {2012},
+  journal = {Remote Sensing of Environment}
+}
+
+@article{arias_2019_hyperspectral,
+  author = {Arias, Luis and Cifuentes, Jose and Marín, Milton and Castillo, Fernando and Garcés, Hugo},
+  month = {01},
+  pages = {1393},
+  title = {Hyperspectral Imaging Retrieval Using MODIS Satellite Sensors Applied to Volcanic Ash Clouds Monitoring},
+  url = {https://www.mdpi.com/2072-4292/11/11/1393},
+  urldate = {2020-05-12},
+  volume = {11},
+  year = {2019},
+  journal = {Remote Sensing}
+}
+
+@misc{nasa_1999_modis,
+  author = {NASA, },
+  title = {MODIS Web},
+  url = {https://modis.gsfc.nasa.gov/},
+  year = {1999},
+  organization = {modis.gsfc.nasa.gov}
+}
+
+@misc{esa_2014_user,
+  author = {ESA, },
+  title = {User Guides - Sentinel-1 SAR - Applications - Sentinel Online},
+  url = {https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/applications},
+  urldate = {2020-05-12},
+  year = {2014},
+  organization = {sentinel.esa.int}
+}
+
+@article{goward_1991_normalized,
+  author = {Goward, Samuel N. and Markham, Brian and Dye, Dennis G. and Dulaney, Wayne and Yang, Jingli},
+  month = {02},
+  pages = {257–277},
+  title = {Normalized difference vegetation index measurements from the advanced very high resolution radiometer},
+  url = {https://www.sciencedirect.com/science/article/abs/pii/003442579190017Z},
+  urldate = {2020-05-12},
+  volume = {35},
+  year = {1991},
+  journal = {Remote Sensing of Environment}
+}
+
+@article{hall_2002_modis,
+  author = {Hall, Dorothy K and Riggs, George A and Salomonson, Vincent V and DiGirolamo, Nicolo E and Bayr, Klaus J},
+  month = {11},
+  pages = {181-194},
+  title = {MODIS snow-cover products},
+  urldate = {2020-04-29},
+  volume = {83},
+  year = {2002},
+  journal = {Remote Sensing of Environment}
+}
+
+@article{ogen_2020_assessing,
+  author = {Ogen, Yaron},
+  month = {07},
+  pages = {138605},
+  title = {Assessing nitrogen dioxide (NO2) levels as a contributing factor to coronavirus (COVID-19) fatality},
+  urldate = {2020-04-23},
+  volume = {726},
+  year = {2020},
+  journal = {Science of The Total Environment}
+}
+
+@misc{digitalglobe_2019_digitalglobe,
+  author = {DigitalGlobe, },
+  title = {DigitalGlobe | Oldest leader in satellite imagery},
+  url = {https://www.digitalglobe.com/products/satellite-imagery},
+  urldate = {2020-05-12},
+  year = {2019},
+  organization = {www.digitalglobe.com}
+}
+
+@article{velden_1997_uppertropospheric,
+  author = {Velden, Christopher S. and Hayden, Christopher M. and Nieman, Steven J. and Menzel, W. Paul and Wanzong, Steven and Goerss, James S.},
+  month = {02},
+  pages = {173-195},
+  title = {Upper-Tropospheric Winds Derived from Geostationary Satellite Water Vapor Observations},
+  urldate = {2020-05-12},
+  volume = {78},
+  year = {1997},
+  journal = {Bulletin of the American Meteorological Society}
+}
+
+@misc{sirosh_2018_microsoft,
+  author = {Sirosh, Jospeh},
+  publisher = {Microsoft},
+  title = {Microsoft and Esri launch Geospatial AI on Azure},
+  url = {https://azure.microsoft.com/en-gb/blog/microsoft-and-esri-launch-geospatial-ai-on-azure/},
+  urldate = {2020-05-12},
+  year = {2018},
+  organization = {Microsoft Azure}
+}
+
+@article{doxani_2018_atmospheric,
+  author = {Doxani, Georgia and Vermote, Eric and Roger, Jean-Claude and Gascon, Ferran and Adriaensen, Stefan and Frantz, David and Hagolle, Olivier and Hollstein, André and Kirches, Grit and Li, Fuqin and Louis, Jérôme and Mangin, Antoine and Pahlevan, Nima and Pflug, Bringfried and Vanhellemont, Quinten},
+  month = {02},
+  pages = {352},
+  title = {Atmospheric Correction Inter-Comparison Exercise},
+  url = {https://www.mdpi.com/2072-4292/10/2/352},
+  urldate = {2020-05-12},
+  volume = {10},
+  year = {2018},
+  journal = {Remote Sensing}
+}
+
+@article{matgen_2011_towards,
+  author = {Matgen, P. and Hostache, R. and Schumann, G. and Pfister, L. and Hoffmann, L. and Savenije, H. H. G.},
+  month = {01},
+  pages = {241–252},
+  title = {Towards an automated SAR-based flood monitoring system: Lessons learned from two case studies},
+  url = {https://ui.adsabs.harvard.edu/abs/2011PCE....36..241M/abstract},
+  urldate = {2020-05-18},
+  volume = {36},
+  year = {2011},
+  journal = {PCE}
+}
+
+@misc{geudtner_2014_sentinel1,
+  author = {Geudtner, Dirk and Torres, Ramón and Snoeij, Paul and Davidson, Malcolm and Rommen, Björn},
+  month = {07},
+  pages = {1457–1460},
+  title = {Sentinel-1 System capabilities and applications},
+  url = {https://ieeexplore.ieee.org/abstract/document/6946711?casa_token=ipquhoYD1vsAAAAA:dbikc882lFWqjPSOsFDDEqusPriOsdqkuGVwv3oHusNoD1lbfQuOqnUVT_cOdc4EqmABk6cfpw},
+  urldate = {2020-05-18},
+  year = {2014},
+  organization = {IEEE Xplore}
+}
+
+@article{gascon_2017_copernicus,
+  author = {Gascon, Ferran and Bouzinac, Catherine and Thépaut, Olivier and Jung, Mathieu and Francesconi, Benjamin and Louis, Jérôme and Lonjou, Vincent and Lafrance, Bruno and Massera, Stéphane and Gaudel-Vacaresse, Angélique and Languille, Florie and Alhammoud, Bahjat and Viallefont, Françoise and Pflug, Bringfried and Bieniarz, Jakub and Clerc, Sébastien and Pessiot, Laëtitia and Trémas, Thierry and Cadau, Enrico and De Bonis, Roberto and Isola, Claudia and Martimort, Philippe and Fernandez, Valérie},
+  month = {06},
+  pages = {584},
+  title = {Copernicus Sentinel-2A Calibration and Products Validation Status},
+  url = {https://www.mdpi.com/2072-4292/9/6/584},
+  urldate = {2020-05-18},
+  volume = {9},
+  year = {2017},
+  journal = {Remote Sensing}
+}
+
+@article{goffi_2020_towards,
+  author = {Goffi, Alessia and Stroppiana, Daniela and Brivio, Pietro Alessandro and Bordogna, Gloria and Boschetti, Mirco},
+  month = {02},
+  pages = {101951},
+  title = {Towards an automated approach to map flooded areas from Sentinel-2 MSI data and soft integration of water spectral features},
+  url = {https://www.sciencedirect.com/science/article/pii/S0303243419303952},
+  urldate = {2020-05-18},
+  volume = {84},
+  year = {2020},
+  journal = {International Journal of Applied Earth Observation and Geoinformation}
+}
+
+@article{twele_2016_sentinel1based,
+  author = {Twele, André and Cao, Wenxi and Plank, Simon and Martinis, Sandro},
+  month = {06},
+  pages = {2990-3004},
+  title = {Sentinel-1-based flood mapping: a fully automated processing chain},
+  urldate = {2020-05-18},
+  volume = {37},
+  year = {2016},
+  journal = {International Journal of Remote Sensing}
+}
+
+@article{li_2019_urban,
+  author = {Li, Yu and Martinis, Sandro and Wieland, Marc and Schlaffer, Stefan and Natsuaki, Ryo},
+  month = {09},
+  pages = {2231},
+  title = {Urban Flood Mapping Using SAR Intensity and Interferometric Coherence via Bayesian Network Fusion},
+  urldate = {2020-05-18},
+  volume = {11},
+  year = {2019},
+  journal = {Remote Sensing}
+}
+
+@article{jain_2020_automatic,
+  author = {Jain, Pallavi and Schoen-Pelan, Bianca and Ross, Robert},
+  month = {04},
+  pages = {617-623},
+  title = {Automatic flood detection in SentineI-2 images using deep convolutional neural networks},
+  year = {2020},
+  journal = {SAC '20: Proceedings of the 35th Annual ACM Symposium on Applied Computing}
+}
+
+@article{mcfeeters_1996_the,
+  author = {McFEETERS, S. K.},
+  month = {05},
+  pages = {1425-1432},
+  title = {The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features},
+  url = {http://adsabs.harvard.edu/abs/1996IJRS...17.1425M},
+  urldate = {2020-01-12},
+  volume = {17},
+  year = {1996},
+  journal = {International Journal of Remote Sensing}
+}
+
+@article{mcfeeters_1996_the,
+  author = {McFEETERS, S. K.},
+  month = {05},
+  pages = {1425-1432},
+  title = {The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features},
+  url = {http://adsabs.harvard.edu/abs/1996IJRS...17.1425M},
+  volume = {17},
+  year = {1996},
+  journal = {International Journal of Remote Sensing}
+}
+
+@article{du_2016_water,
+  author = {Du, Yun and Zhang, Yihang and Ling, Feng and Wang, Qunming and Li, Wenbo and Li, Xiaodong},
+  month = {04},
+  pages = {354},
+  title = {Water Bodies’ Mapping from Sentinel-2 Imagery with Modified Normalized Difference Water Index at 10-m Spatial Resolution Produced by Sharpening the SWIR Band},
+  url = {https://www.mdpi.com/2072-4292/8/4/354/htm},
+  urldate = {2020-03-04},
+  volume = {8},
+  year = {2016},
+  journal = {Remote Sensing}
+}
+
+@article{du_2016_water,
+  author = {Du, Yun and Zhang, Yihang and Ling, Feng and Wang, Qunming and Li, Wenbo and Li, Xiaodong},
+  month = {04},
+  pages = {354},
+  title = {Water Bodies’ Mapping from Sentinel-2 Imagery with Modified Normalized Difference Water Index at 10-m Spatial Resolution Produced by Sharpening the SWIR Band},
+  url = {https://www.mdpi.com/2072-4292/8/4/354/htm},
+  urldate = {2020-03-04},
+  volume = {8},
+  year = {2016},
+  journal = {Remote Sensing}
+}
+
+@article{xu_2006_modification,
+  author = {Xu, Hanqiu},
+  month = {07},
+  pages = {3025-3033},
+  title = {Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery},
+  url = {http://www.aari.ru/docs/pub/060804/xuh06.pdf},
+  urldate = {2020-01-12},
+  volume = {27},
+  year = {2006},
+  journal = {International Journal of Remote Sensing}
+}
+
+@article{feyisa_2014_automated,
+  author = {Feyisa, Gudina L. and Meilby, Henrik and Fensholt, Rasmus and Proud, Simon R.},
+  month = {01},
+  pages = {23-35},
+  title = {Automated Water Extraction Index: A new technique for surface water mapping using Landsat imagery},
+  urldate = {2020-01-12},
+  volume = {140},
+  year = {2014},
+  journal = {Remote Sensing of Environment}
+}
+
+@article{mishra_2015_automatic,
+  author = {Mishra, Kshitij and Prasad, P. Rama Chandra},
+  pages = {1-9},
+  title = {Automatic Extraction of Water Bodies from Landsat Imagery Using Perceptron Model},
+  urldate = {2020-05-03},
+  volume = {2015},
+  year = {2015},
+  journal = {Journal of Computational Environmental Sciences}
+}
+
+@article{tsagkatakis_2019_survey,
+  author = {Tsagkatakis, Grigorios and Aidini, Anastasia and Fotiadou, Konstantina and Giannopoulos, Michalis and Pentari, Anastasia and Tsakalides, Panagiotis},
+  month = {09},
+  pages = {3929},
+  title = {Survey of Deep-Learning Approaches for Remote Sensing Observation Enhancement},
+  urldate = {2020-05-19},
+  volume = {19},
+  year = {2019},
+  journal = {Sensors}
+}
+
+@article{lopez_2019_impacts,
+  author = {Lopez , Ramon and Thomas, Vinod and Troncoso, Pablo},
+  month = {11},
+  title = {Impacts of Carbon Dioxide Emissions on Global Intense Hydrometeorological Disasters},
+  url = {https://doi.org/10.18783/cddj.v004.i01.a03},
+  urldate = {2020-05-19},
+  year = {2019},
+  journal = {Climate Disaster and Development Journal}
+}
+
+@article{michael_2007_episodic,
+  author = {Michael, Jeffrey A.},
+  month = {06},
+  pages = {149-159},
+  title = {Episodic flooding and the cost of sea-level rise},
+  urldate = {2019-11-12},
+  volume = {63},
+  year = {2007},
+  journal = {Ecological Economics}
+}
+
+@article{green_1989_flooding,
+  author = {GREEN, C. H. and PENNING-ROWSELL, E. C.},
+  month = {02},
+  pages = {27-30},
+  title = {Flooding and the Quantification of ?Intangibles?},
+  urldate = {2020-05-23},
+  volume = {3},
+  year = {1989},
+  journal = {Water and Environment Journal}
+}
+
+@article{dash_2020_identification,
+  author = {Dash, Pratik and Sar, Jishnu},
+  month = {05},
+  title = {Identification and validation of potential flood hazard area using
+            GIS
+            ‐based multi‐criteria analysis and satellite data‐derived water index},
+  urldate = {2020-05-07},
+  year = {2020},
+  journal = {Journal of Flood Risk Management}
+}
+
+@article{bioresita_2018_a,
+  author = {Bioresita, Filsa and Puissant, Anne and Stumpf, André and Malet, Jean-Philippe},
+  month = {02},
+  pages = {217},
+  title = {A Method for Automatic and Rapid Mapping of Water Surfaces from Sentinel-1 Imagery},
+  url = {https://www.mdpi.com/2072-4292/10/2/217/htm},
+  urldate = {2020-05-23},
+  volume = {10},
+  year = {2018},
+  journal = {Remote Sensing}
+}
+
+@article{ngo_2018_a,
+  author = {Ngo, Phuong-Thao and Hoang, Nhat-Duc and Pradhan, Biswajeet and Nguyen, Quang and Tran, Xuan and Nguyen, Quang and Nguyen, Viet and Samui, Pijush and Tien Bui, Dieu},
+  month = {10},
+  pages = {3704},
+  title = {A Novel Hybrid Swarm Optimized Multilayer Neural Network for Spatial Prediction of Flash Floods in Tropical Areas Using Sentinel-1 SAR Imagery and Geospatial Data},
+  urldate = {2020-05-23},
+  volume = {18},
+  year = {2018},
+  journal = {Sensors}
+}
+
+@article{gan_2012_flood,
+  author = {Gan, T.Y. and Zunic, F. and Kuo, C.-C. and Strobl, T.},
+  month = {08},
+  pages = {69-81},
+  title = {Flood mapping of Danube River at Romania using single and multi-date ERS2-SAR images},
+  urldate = {2020-05-23},
+  volume = {18},
+  year = {2012},
+  journal = {International Journal of Applied Earth Observation and Geoinformation}
+}
+
+@article{kaplan_2018_sentinel1,
+  author = {Kaplan, G. and Avdan, U.},
+  month = {04},
+  pages = {729-734},
+  title = {SENTINEL-1 AND SENTINEL-2 DATA FUSION FOR WETLANDS MAPPING: BALIKDAMI, TURKEY},
+  urldate = {2020-03-12},
+  volume = {XLII-3},
+  year = {2018},
+  journal = {ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences}
+}
+
+@article{marin_2015_building,
+  author = {Marin, Carlo and Bovolo, Francesca and Bruzzone, Lorenzo},
+  month = {05},
+  pages = {2664–2682},
+  title = {Building Change Detection in Multitemporal Very High Resolution SAR Images},
+  url = {https://ieeexplore.ieee.org/abstract/document/6948368?casa_token=j3LcYAurkbMAAAAA:Wpw_AgISLHxm64I-Iw57-y0Y040ONqteEhTEiV5AVTWpv7_YDeBt68uJ5pnhKj_HnfhSoTXHIQ},
+  urldate = {2020-05-23},
+  volume = {53},
+  year = {2015},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing}
+}
+
+@article{notti_2018_potential,
+  author = {Notti, Davide and Giordan, Daniele and Caló, Fabiana and Pepe, Antonio and Zucca, Francesco and Galve, Jorge Pedro},
+  month = {11},
+  pages = {1673},
+  title = {Potential and Limitations of Open Satellite Data for Flood Mapping},
+  url = {https://www.mdpi.com/2072-4292/10/11/1673},
+  urldate = {2020-03-12},
+  volume = {10},
+  year = {2018},
+  journal = {Remote Sensing}
+}
+
+@article{yu_2017_convolutional,
+  author = {Yu, Long and Wang, Zhiyin and Tian, Shengwei and Ye, Feiyue and Ding, Jianli and Kong, Jun},
+  month = {03},
+  pages = {1750001},
+  title = {Convolutional Neural Networks for Water Body Extraction from Landsat Imagery},
+  urldate = {2020-05-23},
+  volume = {16},
+  year = {2017},
+  journal = {International Journal of Computational Intelligence and Applications}
+}
+
+@article{balica_2012_a,
+  author = {Balica, S. F. and Wright, N. G. and van der Meulen, F.},
+  month = {06},
+  pages = {73-105},
+  title = {A flood vulnerability index for coastal cities and its use in assessing climate change impacts},
+  urldate = {2019-11-22},
+  volume = {64},
+  year = {2012},
+  journal = {Natural Hazards}
+}
+
+@article{pan_2010_a,
+  author = {Pan, Sinno Jialin and Yang, Qiang},
+  month = {10},
+  pages = {1345-1359},
+  title = {A Survey on Transfer Learning},
+  url = {http://home.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf},
+  urldate = {2019-06-04},
+  volume = {22},
+  year = {2010},
+  journal = {IEEE Transactions on Knowledge and Data Engineering}
+}
+
+@misc{quoc_2019_building,
+  author = {Quoc, Dung and Cao,  and Choe, Youngjun},
+  title = {Building Damage Annotation on Post-Hurricane Satellite Imagery Based on Convolutional Neural Networks},
+  url = {https://arxiv.org/pdf/1807.01688.pdf},
+  urldate = {2020-05-24},
+  year = {2019}
+}
+
+@misc{simonyan_2014_very,
+  author = {Simonyan, Karen and Zisserman, Andrew},
+  title = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
+  url = {https://arxiv.org/abs/1409.1556},
+  urldate = {2019-05-21},
+  year = {2014},
+  organization = {arXiv.org}
+}
+
+@misc{szegedy_2015_going,
+  author = {Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew},
+  title = {Going Deeper with Convolutions},
+  url = {https://research.google/pubs/pub43022/},
+  urldate = {2020-05-24},
+  year = {2015},
+  organization = {Google Research}
+}
+
+@article{maxwell_2018_implementation,
+  author = {Maxwell, Aaron E. and Warner, Timothy A. and Fang, Fang},
+  month = {02},
+  pages = {2784-2817},
+  title = {Implementation of machine-learning classification in remote sensing: an applied review},
+  urldate = {2020-05-24},
+  volume = {39},
+  year = {2018},
+  journal = {International Journal of Remote Sensing}
+}
+
+@article{carreoconde_2019_flood,
+  author = {Carreño Conde, Francisco and De Mata Muñoz, María},
+  month = {11},
+  pages = {2454},
+  title = {Flood Monitoring Based on the Study of Sentinel-1 SAR Images: The Ebro River Case Study},
+  urldate = {2019-12-19},
+  volume = {11},
+  year = {2019},
+  journal = {Water}
+}
+
+@misc{europeanspaceagencyesa_copernicus,
+  author = {European Space Agency (ESA), },
+  title = {Copernicus Open Access Hub.},
+  url = { https://scihub.copernicus.eu/dhus/#/home },
+  urldate = {2020-05-25}
+}
+
+@article{yang_2017_mapping,
+  author = {Yang, Xiucheng and Zhao, Shanshan and Qin, Xuebin and Zhao, Na and Liang, Ligang},
+  month = {06},
+  pages = {596},
+  title = {Mapping of Urban Surface Water Bodies from Sentinel-2 MSI Imagery at 10 m Resolution via NDWI-Based Image Sharpening},
+  url = {https://www.mdpi.com/2072-4292/9/6/596},
+  urldate = {2020-05-26},
+  volume = {9},
+  year = {2017},
+  journal = {Remote Sensing}
+}
+
+@article{maurer_2013_how,
+  author = {Maurer, T.},
+  month = {05},
+  pages = {239-244},
+  title = {HOW TO PAN-SHARPEN IMAGES USING THE GRAM-SCHMIDT PAN-SHARPEN METHOD – A RECIPE},
+  urldate = {2020-05-26},
+  volume = {XL-1/W1},
+  year = {2013},
+  journal = {ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences}
+}
+
+@article{li_2018_an,
+  author = {Li, Yu and Martinis, Sandro and Plank, Simon and Ludwig, Ralf},
+  month = {12},
+  pages = {123-135},
+  title = {An automatic change detection approach for rapid flood mapping in Sentinel-1 SAR data},
+  urldate = {2020-05-27},
+  volume = {73},
+  year = {2018},
+  journal = {International Journal of Applied Earth Observation and Geoinformation}
+}
+
+@article{krizhevsky_2017_imagenet,
+  author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  month = {05},
+  pages = {84-90},
+  title = {ImageNet classification with deep convolutional neural networks},
+  volume = {60},
+  year = {2017},
+  journal = {Communications of the ACM}
+}
+
+@article{shrestha_2019_review,
+  author = {Shrestha, Ajay and Mahmood, Ausif},
+  pages = {53040-53065},
+  title = {Review of Deep Learning Algorithms and Architectures},
+  urldate = {2019-12-04},
+  volume = {7},
+  year = {2019},
+  journal = {IEEE Access}
+}
+
+@article{hoeser_2020_object,
+  author = {Hoeser, Thorsten and Kuenzer, Claudia},
+  month = {05},
+  pages = {1667},
+  title = {Object Detection and Image Segmentation with Deep Learning on Earth Observation Data: A Review-Part I: Evolution and Recent Trends},
+  urldate = {2020-06-05},
+  volume = {12},
+  year = {2020},
+  journal = {Remote Sensing}
+}
+
+@article{yu_2013_the,
+  author = {Yu, Dong and Deng, Li and Seide, Frank},
+  month = {02},
+  pages = {388-396},
+  title = {The Deep Tensor Neural Network With Applications to Large Vocabulary Speech Recognition},
+  urldate = {2020-06-05},
+  volume = {21},
+  year = {2013},
+  journal = {IEEE Transactions on Audio, Speech, and Language Processing}
+}
+
+@article{cirean_2012_multicolumn,
+  author = {Cireşan, Dan and Meier, Ueli and Masci, Jonathan and Schmidhuber, Jürgen},
+  month = {08},
+  pages = {333-338},
+  title = {Multi-column deep neural network for traffic sign classification},
+  urldate = {2019-03-25},
+  volume = {32},
+  year = {2012},
+  journal = {Neural Networks}
+}
+
+@article{shinde_2018_back,
+  author = {Shinde, Sagar and Waghulade, Rajendra},
+  title = {Back Propagation Neural Network (BPNN) Based Recognition Of Handwritten Mathematical Equations},
+  urldate = {2019-11-16},
+  volume = {07},
+  year = {2018},
+  journal = {Journal of Computer Engineering & Information Technology}
+}
+
+@article{romero_2016_unsupervised,
+  author = {Romero, Adriana and Gatta, Carlo and Camps-Valls, Gustau},
+  month = {03},
+  pages = {1349-1362},
+  title = {Unsupervised Deep Feature Extraction for Remote Sensing Image Classification},
+  urldate = {2020-05-15},
+  volume = {54},
+  year = {2016},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing}
+}
