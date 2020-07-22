@@ -10,19 +10,8 @@ This will be updated every now and then.
 All the code required to obtain sentinel 2 data is [here](https://github.com/ThomasJames/Spectral_Indices/blob/master/data_request.py)
 The ```SentinelRequest``` class contains methods to obtain a single image of all bands, or a large batch of images of a specified band. 
 
-## Prerequisite
 
-This program is works with numpy arrays:
 
-```
-pip install numpy
-pip install sentinelhub
-pip install matplotlib
-pip install rifffile
-pip install scikit-image
-pip install pillow
-pip install opencv-python
-```
 ### Error handling
 
 - Program checks that input is numpy array.
